@@ -106,7 +106,7 @@ except Exception as e:
 SELECT DISTINCT author 
 FROM reddit_posts1 
 WHERE score > (SELECT PERCENTILE_CONT(0.90) WITHIN GROUP (ORDER BY score) FROM reddit_posts1);
-![*Q1*](../riteshwar_Scrapping_data%20transform/Authors%20with%20Highly%20Viral%20Posts.png "Q1")
+![Q1](Authors%20with%20Highly%20Viral%20Posts.png "Q1")
 
 
 ## Sql Queries 2

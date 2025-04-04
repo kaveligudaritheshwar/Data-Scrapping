@@ -16,7 +16,7 @@ The ordered process creates a comprehensive system that automates data acquisiti
 
 # Copied Data To Redshift
 
-![*Data*](]Copied%20data.png "Data")
+![*Data*](Copied%20data.png "Data")
 
 ## Python Code
 import praw

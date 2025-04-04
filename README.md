@@ -11,12 +11,12 @@ The loaded Redshift data becomes the basis for SQL query execution to generate d
 The ordered process creates a comprehensive system that automates data acquisition through storage and transformation operations which rely on AWS services to achieve scalable functionality.
 
 ### Flow Diagram
-![*Flow Diagram*](../riteshwar_Scrapping_data%20transform/Flow%20Diagram.jpg "Flow")
+![*Flow Diagram*](Flow%20Diagram.jpg "Flow")
 
 
 # Copied Data To Redshift
 
-![*Data*](../riteshwar_Scrapping_data%20transform/Copied%20data.png "Data")
+![*Data*](]Copied%20data.png "Data")
 
 ## Python Code
 import praw
@@ -126,7 +126,7 @@ EngagementChange AS (
 )
 SELECT * FROM EngagementChange WHERE percentage_change IS NOT NULL ORDER BY percentage_change DESC LIMIT 5;
 
-![*Q2*](../riteshwar_Scrapping_data%20transform/Posts%20with%20the%20Largest%20%25%20Increase%20in%20Engagement%20Day-to-Day.png "Q2")
+![*Q2*](Posts%20with%20the%20Largest%20%25%20Increase%20in%20Engagement%20Day-to-Day.png "Q2")
 
 
 ## Sql Queries 3
@@ -135,7 +135,7 @@ SELECT title, flair, upvotes,
        RANK() OVER (PARTITION BY flair ORDER BY upvotes DESC) AS rank_within_flair 
 FROM reddit_posts1;
 
-![*Q3*](../riteshwar_Scrapping_data%20transform/Rank%20Posts%20by%20Upvotes%20Within%20Each%20Flair.png "Q3")
+![*Q3*](Rank%20Posts%20by%20Upvotes%20Within%20Each%20Flair.png "Q3")
 
 ## Sql Queries 4
 ### Top 5 Most Upvoted Posts
@@ -144,7 +144,7 @@ FROM reddit_posts1
 ORDER BY upvotes DESC 
 LIMIT 5;
 
-![*Q4*](../riteshwar_Scrapping_data%20transform/Top%205%20Most%20Upvoted%20Posts.png "Q4")
+![*Q4*](Top%205%20Most%20Upvoted%20Posts.png "Q4")
 
 ## Sql Queries 5
 ### Upvotes catagory wise
@@ -153,7 +153,7 @@ SELECT
     SUM(CASE WHEN flair = 'Business' THEN upvotes ELSE 0 END) AS Business_Upvotes,
     SUM(CASE WHEN flair = 'Networking/Telecom' THEN upvotes ELSE 0 END) AS Networking_Upvotes
 FROM reddit_posts1;
-![*Q5*](../riteshwar_Scrapping_data%20transform/Upvotes%20catagory%20wise.png "Q5")
+![*Q5*](Upvotes%20catagory%20wise.png "Q5")
 
 
 # Guide to Running the Reddit Data Processing Pipeline
